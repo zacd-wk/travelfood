@@ -10,24 +10,34 @@
     <style>
         /* 定義 CSS 全域變數 */
         :root {
-            --bg-body: #f8f9fa;        /* 全局溫和淺灰背景 */
-            --bg-card: #ffffff;        /* 純白底色（外框與卡片） */
-            --bg-img-placeholder: #f1f3f5; /* 圖片載入前的輕微底色 */
+            --bg-body: #f8f9fa;
+            /* 全局溫和淺灰背景 */
+            --bg-card: #ffffff;
+            /* 純白底色（外框與卡片） */
+            --bg-img-placeholder: #f1f3f5;
+            /* 圖片載入前的輕微底色 */
 
-            --text-main: #333333;      /* 預設內文字色 */
-            --text-title: #d9534f;     /* 美食暖紅色（標題） */
-            --text-primary: #2b2b2b;   /* 店家名稱深色字 */
-            --text-muted: #6c757d;     /* 電話高級灰字色 */
+            --text-main: #333333;
+            /* 預設內文字色 */
+            --text-title: #d9534f;
+            /* 美食暖紅色（標題） */
+            --text-primary: #2b2b2b;
+            /* 店家名稱深色字 */
+            --text-muted: #6c757d;
+            /* 電話高級灰字色 */
 
-            --border-card: #eef2f5;    /* 卡片輕微邊框顏色 */
-            --shadow-color: 0, 0, 0;   /* 陰影所使用的黑色的 RGB 基底 */
+            --border-card: #eef2f5;
+            /* 卡片輕微邊框顏色 */
+            --shadow-color: 0, 0, 0;
+            /* 陰影所使用的黑色的 RGB 基底 */
         }
 
         /* 全域重設與字體優化 */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* 確保 padding 不會撐開寬度 */
+            box-sizing: border-box;
+            /* 確保 padding 不會撐開寬度 */
         }
 
         body {
@@ -54,8 +64,10 @@
             margin-bottom: 50px;
             margin-left: auto;
             margin-right: auto;
-            border-radius: 12px; /* 加上圓角 */
-            box-shadow: 0 4px 20px rgba(var(--shadow-color), 0.05); /* 柔和、具現代感的環境陰影 */
+            border-radius: 12px;
+            /* 加上圓角 */
+            box-shadow: 0 4px 20px rgba(var(--shadow-color), 0.05);
+            /* 柔和、具現代感的環境陰影 */
             padding: 20px;
             overflow: hidden;
             background-color: var(--bg-card);
@@ -68,25 +80,33 @@
             margin: 15px 1%;
             background-color: var(--bg-card);
             border: 1px solid var(--border-card);
-            border-radius: 10px; /* 卡片圓角 */
-            box-shadow: 0 4px 8px rgba(var(--shadow-color), 0.04); /* 溫和的小陰影 */
-            overflow: hidden; /* 確保內置圖片和文字不會超出圓角外 */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 滑鼠懸停動畫 */
+            border-radius: 10px;
+            /* 卡片圓角 */
+            box-shadow: 0 4px 8px rgba(var(--shadow-color), 0.04);
+            /* 溫和的小陰影 */
+            overflow: hidden;
+            /* 確保內置圖片和文字不會超出圓角外 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* 滑鼠懸停動畫 */
         }
 
         /* 卡片滑鼠懸停效果 (動態感) */
         .demo:hover {
-            transform: translateY(-5px); /* 微幅向上飄浮 */
-            box-shadow: 0 8px 16px rgba(var(--shadow-color), 0.1); /* 陰影加深 */
+            transform: translateY(-5px);
+            /* 微幅向上飄浮 */
+            box-shadow: 0 8px 16px rgba(var(--shadow-color), 0.1);
+            /* 陰影加深 */
         }
 
         /* 圖片區域優化 */
         .demo .logo {
             width: 100%;
-            height: 200px; /* 微調高度讓比例更和諧 */
+            height: 200px;
+            /* 微調高度讓比例更和諧 */
             background-image: url(images/miss.jpg);
             background-position: center center;
-            background-size: cover; /* 改為 cover 讓美食圖片滿版填滿，視覺張力更強 */
+            background-size: cover;
+            /* 改為 cover 讓美食圖片滿版填滿，視覺張力更強 */
             background-repeat: no-repeat;
             background-color: var(--bg-img-placeholder);
         }
@@ -96,8 +116,10 @@
             font-size: 1.15rem;
             font-weight: bold;
             color: var(--text-primary);
-            padding: 15px 15px 4px 15px; /* 上右下左留白 */
-            white-space: nowrap; /* 超出長度時隱藏並顯示省略號 */
+            padding: 15px 15px 4px 15px;
+            /* 上右下左留白 */
+            white-space: nowrap;
+            /* 超出長度時隱藏並顯示省略號 */
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -106,7 +128,8 @@
         .demo p._tel {
             font-size: 0.95rem;
             color: var(--text-muted);
-            padding: 0 15px 15px 15px; /* 留白 */
+            padding: 0 15px 15px 15px;
+            /* 留白 */
         }
 
         /* RWD 行動裝置優化 */
@@ -114,7 +137,8 @@
             .wrapper {
                 width: 94%;
                 padding: 10px;
-                box-shadow: none; /* 手機端去除大外框陰影更簡潔 */
+                box-shadow: none;
+                /* 手機端去除大外框陰影更簡潔 */
             }
 
             .demo {
@@ -130,11 +154,11 @@
 
     <div class="title-style-a">地方美食餐廳列表</div>
     <div class="wrapper" id="foodlist">
-        <div class="demo">
+        <!-- <div class="demo">
             <div class="logo"></div>
             <p class="_name">店家:xxx</p>
             <p class="_tel">電話:xxx</p>
-        </div>
+        </div> -->
     </div>
 
     <script src="js/jquery-4.0.0.js"></script>
@@ -142,10 +166,10 @@
 
     <script>
         food.forEach((item, index) => {
-            console.log(index);
-            console.log(item.Name);
-            console.log(item.Tel);
-            console.log(item.PicURL);
+            // console.log(index);
+            // console.log(item.Name);
+            // console.log(item.Tel);
+            // console.log(item.PicURL);
 
             $("#foodlist").append('<div class="demo"><div class="logo" style="background-image: url(' + item.PicURL + ');"></div><p class="_name">店家:' + item.Name + '</p><p class="_tel">電話:' + item.Tel + '</p></div>');
 
@@ -156,7 +180,6 @@
             //         <p class="_tel">電話:${item.Tel}</p>
             //     </div>
             // `);
-
         });
     </script>
 
